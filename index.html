@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chicago Trip Preview</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <script>
+    function toggleDarkMode() {
+      const root = document.documentElement;
+      root.classList.toggle("dark");
+
+      // Save preference in localStorage
+      if (root.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
+      } else {
+        localStorage.setItem("theme", "light");
+      }
+    }
+
+    // Apply saved theme on load
+    window.addEventListener("DOMContentLoaded", () => {
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    });
+  </script>
+</head>
+<body class="bg-white text-black dark:bg-black dark:text-white transition-all duration-300">
+  <div class="p-6 max-w-4xl mx-auto">
+    <button onclick="toggleDarkMode()" class="mb-4 px-4 py-2 bg-gray-800 text-white rounded">Toggle Dark Mode</button>
+
+    <h2 class="text-3xl font-bold mb-2">Purpose</h2>
+    <p>Explore various medical-related, and educational, attractions in the city of Chicago, Illinois.</p>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-2">Expected Cost Per Person</h2>
+    <p class="text-lg">💵 <strong>$100 USD per person</strong></p>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-2">Logistics</h2>
+    <p>Two People to a Room (8 Students, 1 Supervisor)</p>
+    <p class="text-lg mt-2">📊 <strong>$800 Budget</strong></p>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-2">Expenses</h2>
+    <ul class="space-y-2">
+      <li>🏨 Lodging: $659 (4 rooms) $791 (5 rooms) — 
+        <a href="https://www.booking.com/hotel/us/hyatt-place-chicago-river-north.html?aid=356929&label=metagha-link-LUUS-hotel-599443_dev-desktop_los-1_bw-6_dow-Sunday_defdate-1_room-0_gstadt-2_rateid-public_aud-0_gacid-21415088623_mcid-10_ppa-0_clrid-0_ad-1_gstkid-0_checkin-20250420_ppt-_lp-2840_r-1064742168704081769&sid=b875fb6aaa18fb5c5c3119be531c6f3f&all_sr_blocks=59944305_106964545_5_1_0%2C59944305_106964545_5_1_0%2C59944302_106964545_2_1_0%2C59944302_106964545_2_1_0&checkin=2025-05-01&checkout=2025-05-02&dest_id=20033173&dest_type=city&dist=0&group_adults=9&group_children=0&hapos=1&highlighted_blocks=59944305_106964545_5_1_0%2C59944305_106964545_5_1_0%2C59944302_106964545_2_1_0%2C59944302_106964545_2_1_0&hpos=1&matching_block_id=59944305_106964545_5_1_0&no_rooms=4&req_adults=9&req_children=0&room1=A%2CA&room2=A%2CA&room3=A%2CA&room4=A%2CA%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=59944305_106964545_5_1_0__18050%2C59944305_106964545_5_1_0__18050%2C59944302_106964545_2_1_0__14900%2C59944302_106964545_2_1_0__14900&srepoch=1744629916&srpvid=2bf14e83511b0d69&type=total&ucfs=1&" target="_blank" class="text-blue-400 underline">Visit Example</a>
+      </li>
+      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/535070105.jpg?k=a1f00674a16211b452b76189a025bb2a1d563c2032e3a554f9b32dc627793825&o=&hp=1" class="rounded-lg shadow" alt="Hotel" />
+      <li>🚐 Transportation: Free (Thea Bowman Van)</li>
+      <li>🎟️ Museum Admission: $50 USD</li>
+    </ul>
+    <p class="text-red-500 mt-2">💸 Remaining: Approx -$46 USD</p>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-4">Attractions to Visit</h2>
+
+    <!-- Attraction 1 -->
+    <div class="mb-6">
+      <h3 class="text-xl font-semibold mb-2">Indiana Medical History Museum</h3>
+      <img src="https://townsquare.media/site/71/files/2024/08/attachment-Untitled-design-2024-08-19T121954.580.jpg?w=780&q=75" alt="Indiana Medical History Museum" class="rounded-lg shadow w-full" />
+    </div>
+
+    <!-- Attraction 2 -->
+    <div class="mb-6">
+      <h3 class="text-xl font-semibold mb-2">White River State Park</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <img src="https://github.com/cyphensworld/CNA-Trip-to-INDY/blob/main/20210313_185808-01.jpeg?raw=true" class="rounded-lg shadow" alt="Canal with string lights" />
+        <img src="https://github.com/cyphensworld/CNA-Trip-to-INDY/blob/main/rweuky6bu0b61.jpg?raw=true" class="rounded-lg shadow" alt="Canal daytime" />
+        <img src="https://github.com/cyphensworld/CNA-Trip-to-INDY/blob/main/unnamed%20(1).jpg?raw=true" class="rounded-lg shadow" alt="White River Trail" />
+      </div>
+    </div>
+
+    <!-- Attraction 3 -->
+    <div class="mb-6">
+      <h3 class="text-xl font-semibold mb-2">Soldiers & Sailors Monument</h3>
+      <img src="https://github.com/cyphensworld/CNA-Trip-to-INDY/blob/main/unnamed%20(2).jpg?raw=true" class="rounded-lg shadow" alt="Soldiers and Sailors Monument" />
+    </div>
+
+  </div>
+</body>
+</html>
